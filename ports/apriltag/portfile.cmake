@@ -11,10 +11,6 @@ vcpkg_from_github(
     HEAD_REF master
 )
 
-# ${SOURCE_PATH} = [vcpkg]/buildtrees/apriltag/src/[temp dir with code]/
-# ${CMAKE_CURRENT_BINARY_DIR} = [vcpkg]
-# ${CURRENT_PACKAGES_DIR} = [vcpkg]/packages/apriltag_x64-windows
-# ${TARGET_TRIPLET} = x64-windows
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_BINARY_DIR}/scripts/buildsystems/vcpkg.cmake)
 
 vcpkg_configure_cmake(
