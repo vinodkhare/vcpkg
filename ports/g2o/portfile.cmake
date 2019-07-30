@@ -3,8 +3,8 @@ include(vcpkg_common_functions)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO RainerKuemmerle/g2o
-    REF 20170730_git
-    SHA512 a85e3f79e6a8bd0f81a9a1a7a01227779100d9f4ebd0ae9c03537bbdcc246018f292b53045f027bbe28ecf63b98de2f22f5528c992c93c9790eb6a3a40995903
+    REF 9b41a4ea5ade8e1250b9c1b279f3a9c098811b5a
+    SHA512 011de54eafac646e114da887ca9ba9588f1cf15afa977f724af1417aca7b24dd4f68ab37e5ff2439b1d1c9376433bcbdf0c10ff9eba89005e92391fedb8ea612
     HEAD_REF master
 )
 
@@ -47,3 +47,5 @@ file(REMOVE_RECURSE ${CURRENT_PACKAGES_DIR}/debug/share)
 # Put the license file where vcpkg expects it
 file(COPY ${SOURCE_PATH}/doc/license-bsd.txt DESTINATION ${CURRENT_PACKAGES_DIR}/share/g2o/)
 file(RENAME ${CURRENT_PACKAGES_DIR}/share/g2o/license-bsd.txt ${CURRENT_PACKAGES_DIR}/share/g2o/copyright)
+
+vcpkg_fixup_cmake_targets()
